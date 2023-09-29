@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" class="css">
+    <link rel="stylesheet" href="https://fontlibrary.org//face/segment7" class="css">
+    <title>Digital Clock by GK</title>
+</head>
+
+<body>
+    <div class="Main">
+        <h1>Digital Clock</h1>
+        <div class="clock">
+            <div class="hour">
+                <h4>Hours</h4>
+                <h3>00</h3>
+            </div>
+            <div class="minutes">
+                <h4>Minutes</h4>
+                <h3>00</h3>
+            </div>
+            <div class="seconds">
+                <h4>Seconds</h4>
+                <h3>00</h3>
+            </div>
+        </div>
+        <!-- <h1>Made by GK</h1> -->
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(() => {
+            setInterval(function () {
+                let dt = new Date();
+                $("div.hour h3").text(dt.getHours());
+                $("div.minutes h3").text(dt.getMinutes());
+                $("div.seconds h3").text(dt.getSeconds());
+            }, 1000)
+        })
+    </script>
+
+</body>
+
+</html>
